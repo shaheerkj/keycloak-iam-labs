@@ -8,12 +8,13 @@
 
 Before starting any lab, ensure you have Keycloak running locally:
 
-```bash
+```powershell
 # Docker (recommended)
-docker run -p 8080:8080 \
-  -e KC_BOOTSTRAP_ADMIN_USERNAME=admin \
-  -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin \
-  quay.io/keycloak/keycloak:latest start-dev
+docker run -p 8080:8080 `
+-e KC_BOOTSTRAP_ADMIN_USERNAME=admin `
+-e KC_BOOTSTRAP_ADMIN_PASSWORD=admin `
+-v keycloak_data:/opt/keycloak/data `
+quay.io/keycloak/keycloak:latest start-dev
 
 # Admin Console
 http://localhost:8080/admin
