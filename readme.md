@@ -16,6 +16,11 @@ docker run -p 8080:8080 `
 -v keycloak_data:/opt/keycloak/data `
 quay.io/keycloak/keycloak:latest start-dev
 
+# Or you can use the docker-compose file provided with this repo
+git clone https://github.com/shaheerkj/keycloak-iam-labs
+cd keycloak-iam-labs/
+docker compose up -d
+
 # Admin Console
 http://localhost:8080/admin
 ```
